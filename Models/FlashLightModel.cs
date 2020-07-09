@@ -7,7 +7,7 @@ namespace FPSAmuk
     public sealed class FlashLightModel : BaseObjectScene
     {
         [SerializeField] private float _speed = 11.0f;
-        [SerializeField] private float _batteryChargeMax = 100;
+        [SerializeField] private float _batteryChargeMax = 10;
         [SerializeField] private float _intensity = 1.5f;
         private Light _light;
         private Transform _goFollow;
@@ -30,6 +30,7 @@ namespace FPSAmuk
             _takeAwayTheIntensity = _intensity / (_batteryChargeMax * 100.0f);
         }
 
+
         public void Switch(FlashLightActiveType value)
         {
             switch (value)
@@ -40,6 +41,7 @@ namespace FPSAmuk
                     transform.rotation = _goFollow.rotation;
                     break;
                 case FlashLightActiveType.None:
+                    
                     break;
                 case FlashLightActiveType.Off:
                     _light.enabled = false;
@@ -81,14 +83,14 @@ namespace FPSAmuk
             return BatteryChargeCurrent <= _batteryChargeMax / 2.0f;
         }
 
-        public bool BatteryRecharge()
+        public void BatteryRecharge()
         {
             if (BatteryChargeCurrent < _batteryChargeMax)
             {
                 BatteryChargeCurrent += Time.deltaTime;
-                return true;
+                //return true;
             }
-            return false;
+            //return false;
         }
     }
 }

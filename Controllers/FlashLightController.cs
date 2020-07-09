@@ -16,7 +16,7 @@ namespace FPSAmuk
             if (IsActive) return;
             if (flashLight.Length > 0) _flashLightModel = flashLight[0] as FlashLightModel;
             if (_flashLightModel == null) return;
-            if (_flashLightModel.BatteryChargeCurrent <= 0) return;
+            if (_flashLightModel.BatteryChargeCurrent <= 1.0) return;
             base.On(_flashLightModel);
             _flashLightModel.Switch(FlashLightActiveType.On);
             UiInterface.LightUiText.SetActive(true);
@@ -26,7 +26,8 @@ namespace FPSAmuk
         {
             if (!IsActive) return;
             base.Off();
-            _flashLightModel.Switch(FlashLightActiveType.Off); ;
+            _flashLightModel.Switch(FlashLightActiveType.Off);
+            
             UiInterface.LightUiText.SetActive(false);
         }
 
@@ -34,6 +35,8 @@ namespace FPSAmuk
         {
             if (!IsActive)
             {
+                //_flashLightModel.BatteryRecharge();
+
                 return;
             }
             if (_flashLightModel.EditBatteryCharge())
