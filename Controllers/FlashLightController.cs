@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Runtime.InteropServices;
+using UnityEngine;
 
 namespace FPSAmuk
 {
@@ -35,7 +36,7 @@ namespace FPSAmuk
         {
             if (!IsActive)
             {
-                //_flashLightModel.BatteryRecharge();
+                //if (_flashLightModel.BatteryRecharge()) return;
 
                 return;
             }
@@ -47,6 +48,7 @@ namespace FPSAmuk
             else
             {
                 Off();
+                //if (_flashLightModel.BatteryRecharge()) return;
             }
         }
     }
