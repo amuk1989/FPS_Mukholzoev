@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 
 
-namespace FPSAmuk
+namespace Geekbrains
 {
     public static class ServiceLocator
     {
-        private static readonly Dictionary<Type, object> _servicecontainer =
+        private static readonly Dictionary<Type, object> _servicecontainer = 
             new Dictionary<Type, object>();
 
         public static void SetService<T>(T value) where T : class
@@ -17,7 +17,7 @@ namespace FPSAmuk
                 _servicecontainer[typeValue] = value;
             }
         }
-
+ 
         public static T Resolve<T>()
         {
             return (T)_servicecontainer[typeof(T)];

@@ -1,24 +1,24 @@
 ﻿using System.Collections.Generic;
 
 
-namespace FPSAmuk
+namespace Geekbrains
 {
     public static partial class TimeRemainingExtensions
     {
         #region Fields
-
+        
         private static readonly List<ITimeRemaining> _timeRemainings = new List<ITimeRemaining>(10);
-
+        
         #endregion
-
-
+        
+        
         #region Properties
 
         public static List<ITimeRemaining> TimeRemainings => _timeRemainings;
-
+        
         #endregion
-
-
+        
+        
         #region Methods
 
         public static void AddTimeRemaining(this ITimeRemaining value)
@@ -40,7 +40,7 @@ namespace FPSAmuk
             }
             _timeRemainings.Remove(value);
         }
-
+        
         #endregion
     }
 }

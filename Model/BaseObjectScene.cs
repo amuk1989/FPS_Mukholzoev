@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FPSAmuk
+namespace Geekbrains
 {
     public abstract class BaseObjectScene : MonoBehaviour
     {
@@ -17,7 +17,7 @@ namespace FPSAmuk
             Rigidbody = GetComponent<Rigidbody>();
             Transform = GetComponent<Transform>();
         }
-
+        
         #endregion
 
         #region Property
@@ -112,7 +112,7 @@ namespace FPSAmuk
             }
         }
         #endregion
-
+        
         /// <summary>
         /// Выключает физику у объекта и его детей
         /// </summary>

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace Geekbrains
 {
-	public sealed  class FlashLightUiText : MonoBehaviour
+	public sealed class WeaponUiText : MonoBehaviour
 	{
 		private Text _text;
 
@@ -12,9 +12,9 @@ namespace Geekbrains
 			_text = GetComponent<Text>();
 		}
 
-		public float Text
+		public void ShowData(int countAmmunition, int countClip)
 		{
-			set => _text.text = $"{value:0.0}";
+			_text.text = $"{countAmmunition}/{countClip}";
 		}
 
 		public void SetActive(bool value)

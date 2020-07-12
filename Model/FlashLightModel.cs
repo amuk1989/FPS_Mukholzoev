@@ -2,12 +2,12 @@
 using UnityEngine;
 using static UnityEngine.Random;
 
-namespace FPSAmuk
+namespace Geekbrains
 {
     public sealed class FlashLightModel : BaseObjectScene
     {
         [SerializeField] private float _speed = 11.0f;
-        [SerializeField] private float _batteryChargeMax = 10;
+        [SerializeField] private float _batteryChargeMax;
         [SerializeField] private float _intensity = 1.5f;
         private Light _light;
         private Transform _goFollow;
@@ -30,7 +30,6 @@ namespace FPSAmuk
             _takeAwayTheIntensity = _intensity / (_batteryChargeMax * 100.0f);
         }
 
-
         public void Switch(FlashLightActiveType value)
         {
             switch (value)
@@ -41,7 +40,6 @@ namespace FPSAmuk
                     transform.rotation = _goFollow.rotation;
                     break;
                 case FlashLightActiveType.None:
-                    
                     break;
                 case FlashLightActiveType.Off:
                     _light.enabled = false;
@@ -57,7 +55,7 @@ namespace FPSAmuk
             transform.rotation = Quaternion.Lerp(transform.rotation,
                 _goFollow.rotation, _speed * Time.deltaTime);
         }
-
+        
         public bool EditBatteryCharge()
         {
             if (BatteryChargeCurrent > 0)

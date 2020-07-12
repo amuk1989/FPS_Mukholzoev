@@ -1,10 +1,9 @@
-﻿
-namespace FPSAmuk
+﻿namespace Geekbrains
 {
     public enum FlashLightActiveType
     {
-        On = 1,
-        Off = 2,
-        None = 0
+        None = 0,
+        On   = 1,
+        Off  = 2
     }
 }

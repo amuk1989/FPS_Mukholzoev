@@ -2,27 +2,27 @@
 using UnityEngine;
 
 
-namespace FPSAmuk
+namespace Geekbrains
 {
     public sealed class TimeRemainingController : IExecute
     {
         #region Fields
-
+        
         private readonly List<ITimeRemaining> _timeRemainings;
-
+        
         #endregion
 
-
+        
         #region ClassLifeCycles
 
         public TimeRemainingController()
         {
             _timeRemainings = TimeRemainingExtensions.TimeRemainings;
         }
-
+        
         #endregion
 
-
+        
         #region IExecute
 
         public void Execute()
@@ -46,7 +46,7 @@ namespace FPSAmuk
                 }
             }
         }
-
+        
         #endregion
     }
 }

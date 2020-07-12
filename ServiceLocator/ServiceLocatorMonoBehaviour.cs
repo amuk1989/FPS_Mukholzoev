@@ -2,7 +2,7 @@
 using UnityEngine;
 
 
-namespace FPSAmuk
+namespace Geekbrains
 {
     public static class ServiceLocatorMonoBehaviour
     {

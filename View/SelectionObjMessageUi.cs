@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace Geekbrains
 {
-	public sealed  class FlashLightUiText : MonoBehaviour
+	public sealed  class SelectionObjMessageUi : MonoBehaviour
 	{
 		private Text _text;
 
@@ -12,9 +12,9 @@ namespace Geekbrains
 			_text = GetComponent<Text>();
 		}
 
-		public float Text
+		public string Text
 		{
-			set => _text.text = $"{value:0.0}";
+			set => _text.text = $"{value}";
 		}
 
 		public void SetActive(bool value)

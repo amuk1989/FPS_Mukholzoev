@@ -1,6 +1,6 @@
-﻿namespace FPSAmuk
+﻿namespace Geekbrains
 {
-    public sealed class PlayerController : BaseControllers, IExecute
+    public sealed class PlayerController : BaseController, IExecute
     {
         private readonly IMotor _motor;
 

@@ -1,4 +1,4 @@
-﻿namespace FPSAmuk
+﻿namespace Geekbrains
 {
 	public interface IInitialization
 	{

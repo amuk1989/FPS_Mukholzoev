@@ -1,14 +1,13 @@
-﻿
-namespace FPSAmuk
+﻿namespace Geekbrains
 {
-    public abstract class BaseControllers
+    public abstract class BaseController
     {
         protected UiInterface UiInterface;
-        protected BaseControllers()
+        protected BaseController()
         {
             UiInterface = new UiInterface();
         }
-
+        
         public bool IsActive { get; private set; }
 
         public virtual void On()
